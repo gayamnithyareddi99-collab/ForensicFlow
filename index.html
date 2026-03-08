@@ -1,0 +1,2094 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ForensicFlow</title>
+
+<style>
+
+/* GENERAL */
+
+body{
+margin:0;
+font-family:Segoe UI;
+background:#0f172a;
+color:white;
+}
+
+section{
+padding:100px 8%;
+}
+/* RESPONSIVE */
+
+@media(max-width:800px){
+
+.nav-links{
+display:none;
+}
+
+.menu{
+display:block;
+}
+
+.mobile{
+display:none;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+}
+
+</style>
+</head>
+<body>
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="nav-wrapper">
+
+<div class="logo">ForensicFlow</div>
+
+<nav class="nav-menu">
+
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#p">Platform</a>
+<a href="#how">Process</a>
+<a href="#pricing">Pricing</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<!-- 3 LINE MENU -->
+
+<div class="menu-toggle" onclick="toggleMenu()">
+
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- MOBILE MENU -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#p">Platform</a>
+<a href="#how">Process</a>
+<a href="#pricing">Pricing</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+
+<style>
+
+/* NAVBAR */
+
+.navbar{
+background:white;
+padding:12px 8%;
+border-bottom:1px solid #e8eef5;
+position:sticky;
+top:0;
+z-index:1000;
+font-family:'Segoe UI',sans-serif;
+}
+
+.nav-wrapper{
+max-width:1100px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+/* LOGO */
+
+.logo{
+font-size:20px;
+font-weight:700;
+color:#1f4e79;
+}
+
+/* DESKTOP MENU */
+
+.nav-menu{
+display:flex;
+gap:28px;
+}
+
+.nav-menu a{
+text-decoration:none;
+color:#444;
+font-size:14px;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav-menu a:hover{
+color:#1f4e79;
+}
+
+/* HAMBURGER ICON */
+
+.menu-toggle{
+display:none;
+flex-direction:column;
+cursor:pointer;
+gap:5px;
+}
+
+.menu-toggle span{
+width:24px;
+height:3px;
+background:#1f4e79;
+border-radius:2px;
+transition:0.3s;
+}
+
+/* MOBILE MENU */
+
+.mobile-menu{
+display:none;
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:white;
+padding:18px;
+
+grid-template-columns:repeat(4,1fr);
+gap:12px;
+
+border-top:1px solid #e8eef5;
+}
+
+.mobile-menu a{
+text-decoration:none;
+background:#f6f9fc;
+padding:16px 10px;
+border-radius:8px;
+text-align:center;
+font-size:13px;
+color:#1f4e79;
+font-weight:600;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.nav-menu{
+display:none;
+}
+
+.menu-toggle{
+display:flex;
+}
+
+}
+
+</style>
+
+
+<script>
+
+function toggleMenu(){
+
+const menu=document.getElementById("mobileMenu");
+
+if(menu.style.display==="grid"){
+menu.style.display="none";
+}else{
+menu.style.display="grid";
+}
+
+}
+
+</script>
+<section id="home" class="hero-section">
+
+<div class="hero-container">
+
+<div class="hero-left">
+
+<h1>Modern Digital Investigation Platform</h1>
+
+<p>
+ForensicFlow helps organisations manage digital investigations,
+secure evidence workflows, and generate reliable forensic reports
+through intelligent investigation systems.
+</p>
+<a href="#contact" class="btn-primary">Get Started</a>
+<a href="#p" class="btn-outline">Learn More</a>
+</div>
+
+<div class="hero-right">
+<img src="flowhero.jpeg" alt="Investigation System">
+</div>
+
+</div>
+
+</section>
+
+
+<style>
+
+.hero-section{
+padding:90px 8%;
+font-family:'Segoe UI',sans-serif;
+
+/* BACKGROUND IMAGE */
+
+background-image:
+linear-gradient(rgba(196, 192, 192, 0.85), rgba(175, 173, 173, 0.85)),
+url("flowhero.jpeg");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+.hero-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1.1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+/* LEFT */
+
+.hero-left h1{
+font-size:46px;
+color:#1f4e79;
+margin-bottom:20px;
+}
+
+.hero-left p{
+color:#000000;
+line-height:1.7;
+margin-bottom:30px;
+}
+.btn-primary{
+padding:12px 28px;
+border:none;
+border-radius:30px;
+background:#1f4e79;
+color:white;
+font-weight:600;
+text-decoration:none;
+display:inline-block;
+}
+
+.btn-outline{
+padding:12px 28px;
+border-radius:30px;
+border:2px solid #1f4e79;
+background:white;
+color:#1f4e79;
+font-weight:600;
+text-decoration:none;
+display:inline-block;
+}
+/* BUTTONS */
+
+.hero-buttons{
+display:flex;
+gap:15px;
+margin-bottom:40px;
+}
+
+.btn-primary{
+padding:12px 28px;
+border:none;
+border-radius:30px;
+background:#1f4e79;
+color:white;
+cursor:pointer;
+font-weight:600;
+}
+
+.btn-primary:hover{
+background:#163a5f;
+}
+
+.btn-outline{
+padding:12px 28px;
+border-radius:30px;
+border:2px solid #1f4e79;
+background:white;
+color:#1f4e79;
+cursor:pointer;
+font-weight:600;
+}
+html{
+scroll-behavior:smooth;
+}
+/* STATS */
+
+.hero-stats{
+display:flex;
+gap:40px;
+}
+
+.stat h3{
+color:#1f4e79;
+font-size:22px;
+}
+
+.stat p{
+font-size:13px;
+color:#777;
+}
+
+/* HIDE RIGHT IMAGE */
+
+.hero-right{
+display:none;
+}
+
+@media(max-width:900px){
+
+.hero-section{
+padding:70px 6%;
+}
+
+/* GRID */
+
+.hero-container{
+grid-template-columns:1fr;
+gap:30px;
+text-align:center;
+}
+
+/* TITLE */
+
+.hero-left h1{
+font-size:30px;
+line-height:1.3;
+}
+
+/* TEXT */
+
+.hero-left p{
+font-size:15px;
+margin-bottom:25px;
+}
+
+/* BUTTONS */
+
+.btn-primary,
+.btn-outline{
+display:inline-block;
+margin:6px;
+padding:10px 22px;
+font-size:14px;
+}
+
+/* IMAGE */
+
+.hero-right{
+display:none;
+}
+
+}
+
+</style>
+</section>
+<section id="about" class="about-section">
+
+<div class="about-container">
+
+<!-- LEFT SIDE -->
+
+<div class="about-left">
+
+<h2>About ForensicFlow</h2>
+
+<p class="about-intro">
+ForensicFlow helps organisations manage digital investigations
+through secure infrastructure, intelligent workflows, and
+modern investigation management systems.
+</p>
+
+<p>
+The company focuses on building reliable investigation tools that
+allow teams to collect digital evidence, analyse complex data,
+and manage investigation processes with complete transparency.
+</p>
+
+<p>
+With strong security architecture and automation capabilities,
+ForensicFlow enables organisations to improve operational
+efficiency while maintaining investigation integrity.
+</p>
+
+<div class="about-highlight">
+Secure investigation infrastructure • intelligent workflows •
+operational transparency
+</div>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+
+<div class="founder-card">
+
+<h3>Founder Vision</h3>
+
+<p>
+Founded by <strong>Mitul</strong>, ForensicFlow was created with
+the goal of modernising investigation infrastructure and providing
+organisations with secure systems for managing digital evidence,
+tracking investigations, and producing reliable forensic reports.
+</p>
+
+<div class="founder-line"></div>
+
+<p class="founder-note">
+Building trusted investigation technology for modern organisations.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<style>
+
+.about-section{
+padding:140px 8%;
+background:linear-gradient(135deg,#1f4e79,#163a5f);
+font-family:'Segoe UI',sans-serif;
+color:white;
+}
+
+.about-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:80px;
+align-items:center;
+}
+
+/* LEFT */
+
+.about-left h2{
+font-size:42px;
+margin-bottom:25px;
+}
+
+.about-intro{
+font-size:18px;
+color:#dce8f5;
+margin-bottom:20px;
+}
+
+.about-left p{
+line-height:1.7;
+color:#dce8f5;
+margin-bottom:18px;
+}
+
+.about-highlight{
+margin-top:25px;
+color:#8ec5ff;
+font-weight:500;
+}
+
+/* RIGHT CARD */
+
+.founder-card{
+background:white;
+padding:45px;
+border-radius:18px;
+box-shadow:0 30px 70px rgba(0,0,0,0.25);
+color:#333;
+position:relative;
+}
+
+.founder-card h3{
+color:#1f4e79;
+margin-bottom:18px;
+font-size:22px;
+}
+
+.founder-card p{
+line-height:1.7;
+font-size:15px;
+}
+
+.founder-line{
+height:3px;
+width:50px;
+background:#1f4e79;
+margin:25px 0;
+}
+
+.founder-note{
+color:#555;
+font-size:14px;
+}
+@media(max-width:900px){
+
+.about-section{
+padding:80px 6%;
+}
+
+/* GRID */
+
+.about-container{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+/* LEFT TEXT */
+
+.about-left{
+text-align:center;
+}
+
+.about-left h2{
+font-size:28px;
+}
+
+.about-intro{
+font-size:15px;
+}
+
+.about-left p{
+font-size:14px;
+line-height:1.6;
+}
+
+/* HIGHLIGHT */
+
+.about-highlight{
+font-size:14px;
+}
+
+/* FOUNDER CARD */
+
+.founder-card{
+padding:30px 25px;
+border-radius:14px;
+}
+
+.founder-card h3{
+font-size:20px;
+}
+
+.founder-card p{
+font-size:14px;
+}
+
+.founder-line{
+margin:18px auto;
+}
+
+.founder-note{
+font-size:13px;
+}
+
+}
+
+</style>
+<section id="p" class="platform-section">
+
+<h2 class="platform-title">Our Platform</h2>
+<p class="platform-subtitle">
+Powerful tools designed to manage digital investigations,
+secure workflows, and operational intelligence.
+</p>
+
+<div class="platform-grid">
+
+<!-- CARD 1 -->
+<div class="platform-card">
+
+<div class="card-icon">
+<img src="flow6.jpeg">
+</div>
+
+<h4>Digital Evidence Management</h4>
+
+<p class="short-text">
+Securely collect and store digital evidence.
+</p>
+
+<p class="more-text">
+Our platform allows investigators to upload, organise,
+and manage evidence in a secure environment with full
+audit logs and verification systems.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- CARD 2 -->
+<div class="platform-card">
+
+<div class="card-icon">
+<img src="flow7.jpeg">
+</div>
+
+<h4>AI Investigation Analysis</h4>
+
+<p class="short-text">
+AI tools detect patterns and anomalies.
+</p>
+
+<p class="more-text">
+Advanced machine learning models analyse investigation
+data, helping teams identify suspicious behaviour,
+connections, and insights quickly.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- CARD 3 -->
+<div class="platform-card">
+
+<div class="card-icon">
+<img src="flow8.jpeg">
+</div>
+
+<h4>Workflow Automation</h4>
+
+<p class="short-text">
+Automate investigation processes.
+</p>
+
+<p class="more-text">
+Automated workflows manage task assignments,
+approvals, and case progress tracking across
+multiple departments.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- CARD 4 -->
+<div class="platform-card">
+
+<div class="card-icon">
+<img src="flow9.jpeg">
+</div>
+
+<h4>Secure Chain of Custody</h4>
+
+<p class="short-text">
+Maintain evidence integrity.
+</p>
+
+<p class="more-text">
+Track every action performed on evidence with
+secure chain-of-custody records ensuring
+legal compliance.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- CARD 5 -->
+<div class="platform-card">
+
+<div class="card-icon">
+<img src="flow10.jpeg">
+</div>
+
+<h4>Investigation Tracking</h4>
+
+<p class="short-text">
+Monitor investigation progress.
+</p>
+
+<p class="more-text">
+Real-time dashboards provide visibility into
+case status, investigator activity, and
+operational performance metrics.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- CARD 6 -->
+<div class="platform-card">
+
+<div class="card-icon">
+<img src="flow11.jpeg">
+</div>
+
+<h4>Forensic Reporting</h4>
+
+<p class="short-text">
+Generate professional reports.
+</p>
+
+<p class="more-text">
+Automatically create forensic investigation
+reports ready for legal documentation,
+compliance review, and organisational records.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+.platform-section{
+padding:120px 8%;
+background:white;
+font-family:'Segoe UI',sans-serif;
+text-align:center;
+}
+
+.platform-title{
+font-size:38px;
+color:#1f4e79;
+margin-bottom:10px;
+}
+
+.platform-subtitle{
+color:#666;
+margin-bottom:70px;
+max-width:650px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* GRID */
+
+.platform-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
+}
+
+/* CARD */
+
+.platform-card{
+background:#f8fbff;
+padding:40px 30px;
+border-radius:16px;
+border:1px solid #e5edf7;
+text-align:center;
+transition:0.3s;
+}
+
+.platform-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* BIG ICON */
+
+.card-icon{
+width:300px;
+height:200px;
+background:#eaf3ff;
+border-radius:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:auto;
+margin-bottom:20px;
+}
+
+.card-icon img{
+width:500px;
+}
+.card-icon img{
+width:100%;
+height:100%;
+object-fit:contain;
+}
+/* TEXT */
+
+.platform-card h4{
+color:#1f4e79;
+margin-bottom:10px;
+}
+
+.short-text{
+color:#555;
+font-size:14px;
+margin-bottom:12px;
+}
+
+.more-text{
+display:none;
+font-size:14px;
+color:#555;
+line-height:1.6;
+margin-bottom:15px;
+}
+.platform-card{
+background:#f8fbff;
+padding:35px 30px;
+border-radius:14px;
+border:2px solid #d7e6f7;   /* card border */
+text-align:center;
+transition:0.3s;
+}
+
+/* hover effect */
+
+.platform-card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+border-color:#1f4e79;      /* border color change */
+}
+
+/* BUTTON */
+
+.learn-btn{
+padding:10px 20px;
+border-radius:25px;
+border:2px solid #1f4e79;
+background:white;
+color:#1f4e79;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.learn-btn:hover{
+background:#1f4e79;
+color:white;
+}
+@media(max-width:900px){
+
+.platform-section{
+padding:70px 6%;
+}
+
+.platform-title{
+font-size:28px;
+}
+
+.platform-subtitle{
+font-size:14px;
+margin-bottom:40px;
+}
+
+/* GRID */
+
+.platform-grid{
+grid-template-columns:1fr;
+gap:25px;
+}
+
+/* CARD */
+
+.platform-card{
+padding:25px 20px;
+}
+
+/* IMAGE BOX */
+
+.card-icon{
+width:100%;
+height:180px;
+border-radius:14px;
+}
+
+/* IMAGE */
+
+.card-icon img{
+width:100%;
+height:100%;
+object-fit:contain;
+}
+
+/* TEXT */
+
+.platform-card h4{
+font-size:18px;
+}
+
+.short-text{
+font-size:13px;
+}
+
+.more-text{
+font-size:13px;
+}
+
+/* BUTTON */
+
+.learn-btn{
+padding:8px 18px;
+font-size:13px;
+}
+
+}
+
+</style>
+
+
+
+<script>
+
+const buttons=document.querySelectorAll(".learn-btn");
+
+buttons.forEach(button=>{
+button.addEventListener("click",function(){
+
+const card=this.parentElement;
+const moreText=card.querySelector(".more-text");
+
+if(moreText.style.display==="block"){
+moreText.style.display="none";
+this.innerText="Learn More";
+}else{
+moreText.style.display="block";
+this.innerText="Show Less";
+}
+
+});
+});
+
+</script>
+<section id="how" class="process-section">
+
+<h2 class="process-title">How It Works</h2>
+
+<div class="process-container">
+
+<div class="process-step">
+
+<div class="circle">
+<img src="flow1.jpeg">
+</div>
+
+<h4>Collect Evidence</h4>
+<p>Import digital evidence and logs into the secure investigation platform.</p>
+
+</div>
+
+
+<div class="process-step">
+
+<div class="circle">
+<img src="flow2.jpeg">
+</div>
+
+<h4>Analyze Data</h4>
+<p>AI-driven analysis identifies patterns and investigation insights.</p>
+
+</div>
+
+
+<div class="process-step">
+
+<div class="circle">
+<img src="flow3.jpeg">
+</div>
+
+<h4>Track Investigation</h4>
+<p>Maintain chain-of-custody and manage investigation workflows.</p>
+
+</div>
+
+
+<div class="process-step">
+
+<div class="circle">
+<img src="flow5.jpeg">
+</div>
+
+<h4>Generate Reports</h4>
+<p>Create secure forensic reports for legal and compliance use.</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<style>
+
+.process-section{
+padding:140px 8%;
+background:linear-gradient(135deg,#1f4e79,#163a5f);
+font-family:'Segoe UI',sans-serif;
+color:white;
+text-align:center;
+}
+
+.process-title{
+font-size:40px;
+margin-bottom:80px;
+}
+
+/* PROCESS GRID */
+
+.process-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:40px;
+position:relative;
+}
+
+/* LINE */
+
+.process-container::before{
+content:"";
+position:absolute;
+top:40px;
+left:10%;
+width:80%;
+height:3px;
+background:rgba(255,255,255,0.3);
+z-index:0;
+}
+
+/* STEP */
+
+.process-step{
+position:relative;
+z-index:1;
+}
+
+.circle{
+width:70px;
+height:70px;
+background:#1f4e79;
+border:3px solid #7fb4ff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:auto;
+margin-bottom:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+overflow:hidden;   /* important */
+}
+
+.circle img{
+max-width:130%;     /* image stays inside circle */
+max-height:130%;
+object-fit:contain;
+}
+/* TEXT */
+
+.process-step h4{
+margin-bottom:8px;
+font-size:18px;
+}
+
+.process-step p{
+font-size:14px;
+color:#dfeaf5;
+line-height:1.6;
+}
+@media(max-width:900px){
+
+.process-section{
+padding:80px 6%;
+}
+
+.process-title{
+font-size:28px;
+margin-bottom:40px;
+}
+
+/* GRID */
+
+.process-container{
+grid-template-columns:1fr;
+gap:35px;
+}
+
+/* REMOVE LINE */
+
+.process-container::before{
+display:none;
+}
+
+/* STEP */
+
+.process-step{
+max-width:420px;
+margin:auto;
+}
+
+/* CIRCLE */
+
+.circle{
+width:65px;
+height:65px;
+margin-bottom:15px;
+}
+
+/* IMAGE */
+
+.circle img{
+max-width:120%;
+max-height:120%;
+}
+
+/* TEXT */
+
+.process-step h4{
+font-size:18px;
+}
+
+.process-step p{
+font-size:13px;
+line-height:1.5;
+}
+
+}
+
+</style>
+<section id="pricing" class="pricing-section">
+
+<h2 class="pricing-title">Simple & Transparent Pricing</h2>
+<p class="pricing-subtitle">Choose the plan that fits your organisation</p>
+
+<div class="pricing-container">
+
+<!-- STARTER -->
+<div class="pricing-card">
+
+<h3>Starter</h3>
+<div class="price">£149</div>
+<p class="month">Per Month</p>
+
+<ul>
+<li>Workflow Automation</li>
+<li>Basic Analytics</li>
+<li>Secure Data Storage</li>
+<li>Email Support</li>
+</ul>
+
+<button class="btn pulse-btn" onclick="goContact()">Get Started</button>
+
+</div>
+
+
+<!-- PRO -->
+<div class="pricing-card popular">
+
+<div class="badge">Most Popular</div>
+
+<h3>Pro</h3>
+<div class="price">£349</div>
+<p class="month">Per Month</p>
+
+<ul>
+<li>Advanced Automation</li>
+<li>Operational Dashboards</li>
+<li>Team Collaboration Tools</li>
+<li>Priority Support</li>
+</ul>
+
+<button class="btn primary pulse-btn" onclick="goContact()">Start Pro</button>
+
+</div>
+
+
+<!-- ENTERPRISE -->
+<div class="pricing-card">
+
+<h3>Enterprise</h3>
+<div class="price">£899</div>
+<p class="month">Per Month</p>
+
+<ul>
+<li>Enterprise Integrations</li>
+<li>Compliance Reporting</li>
+<li>Advanced Security</li>
+<li>Dedicated Support</li>
+</ul>
+
+<button class="btn pulse-btn" onclick="goContact()">Contact Sales</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+.pricing-section{
+padding:100px 8%;
+background:white;
+font-family:'Segoe UI',sans-serif;
+text-align:center;
+}
+
+.pricing-title{
+font-size:38px;
+color:#1f4e79;
+margin-bottom:10px;
+}
+
+.pricing-subtitle{
+color:#777;
+margin-bottom:60px;
+}
+
+.pricing-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.pricing-card{
+background:#f7f9fc;
+padding:40px 30px;
+border-radius:16px;
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
+position:relative;
+transition:0.3s;
+border:2px solid transparent;
+}
+
+.pricing-card:hover{
+transform:translateY(-8px);
+border-color:#1f4e79;
+}
+
+.pricing-card h3{
+color:#1f4e79;
+margin-bottom:10px;
+}
+
+.price{
+font-size:42px;
+font-weight:bold;
+color:#163a5f;
+}
+
+.month{
+font-size:13px;
+color:#888;
+margin-bottom:25px;
+}
+
+.pricing-card ul{
+list-style:none;
+padding:0;
+margin-bottom:30px;
+}
+
+.pricing-card ul li{
+margin:10px 0;
+font-size:14px;
+color:#555;
+}
+
+/* BUTTON */
+
+.btn{
+padding:12px 26px;
+border-radius:30px;
+border:2px solid #1f4e79;
+background:white;
+color:#1f4e79;
+cursor:pointer;
+font-weight:600;
+transition:0.3s;
+position:relative;
+overflow:hidden;
+}
+
+.btn:hover{
+background:#1f4e79;
+color:white;
+transform:scale(1.05);
+}
+
+.primary{
+background:#1f4e79;
+color:white;
+border:none;
+}
+
+.primary:hover{
+background:#163a5f;
+}
+
+/* Pulse Animation */
+
+.pulse-btn{
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+0%{
+box-shadow:0 0 0 0 rgba(31,78,121,0.6);
+}
+
+70%{
+box-shadow:0 0 0 15px rgba(31,78,121,0);
+}
+
+100%{
+box-shadow:0 0 0 0 rgba(31,78,121,0);
+}
+
+}
+
+/* POPULAR CARD */
+
+.popular{
+transform:scale(1.05);
+background:white;
+box-shadow:0 25px 50px rgba(0,0,0,0.12);
+border:2px solid #1f4e79;
+}
+
+.badge{
+position:absolute;
+top:-12px;
+left:50%;
+transform:translateX(-50%);
+background:#1f4e79;
+color:white;
+padding:6px 14px;
+font-size:12px;
+border-radius:20px;
+}
+@media(max-width:900px){
+
+.pricing-section{
+padding:70px 6%;
+}
+
+.pricing-title{
+font-size:28px;
+}
+
+.pricing-subtitle{
+font-size:14px;
+margin-bottom:40px;
+}
+
+/* GRID */
+
+.pricing-container{
+grid-template-columns:1fr;
+gap:25px;
+}
+
+/* CARD */
+
+.pricing-card{
+padding:30px 20px;
+}
+
+/* PRICE */
+
+.price{
+font-size:36px;
+}
+
+/* LIST */
+
+.pricing-card ul li{
+font-size:13px;
+}
+
+/* BUTTON */
+
+.btn{
+padding:10px 20px;
+font-size:14px;
+}
+
+/* POPULAR CARD */
+
+.popular{
+transform:none;
+}
+
+.badge{
+top:-10px;
+font-size:11px;
+padding:5px 12px;
+}
+
+}
+
+</style>
+
+
+<script>
+
+function goContact(){
+
+document.getElementById("contact").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+</script>
+<section id="faq" class="faq-section">
+
+<h2 class="faq-title">Frequently Asked Questions</h2>
+
+<div class="faq-container">
+
+<div class="faq-item">
+<button class="faq-question">
+What is ForensicFlow?
+<span>+</span>
+</button>
+<div class="faq-answer">
+<p>
+ForensicFlow is a secure digital operations platform that helps
+organizations manage workflows, automate processes, and maintain
+transparent operational systems.
+</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Who can use the ForensicFlow platform?
+<span>+</span>
+</button>
+<div class="faq-answer">
+<p>
+The platform is designed for enterprises, government organizations,
+and operational teams that require secure workflow management and
+digital process automation.
+</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+How does ForensicFlow improve workflow management?
+<span>+</span>
+</button>
+<div class="faq-answer">
+<p>
+ForensicFlow automates manual processes, connects teams through
+structured workflows, and improves visibility across operational
+activities.
+</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Is the platform secure for sensitive data?
+<span>+</span>
+</button>
+<div class="faq-answer">
+<p>
+Yes. The platform is built with enterprise-grade security,
+ensuring data protection, secure authentication, and
+compliance-ready infrastructure.
+</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+Can ForensicFlow integrate with existing systems?
+<span>+</span>
+</button>
+<div class="faq-answer">
+<p>
+Yes. The platform is designed to integrate with existing
+enterprise tools, enabling seamless digital operations
+without disrupting current workflows.
+</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">
+How can organizations get started with ForensicFlow?
+<span>+</span>
+</button>
+<div class="faq-answer">
+<p>
+Organizations can contact our team through the website to
+schedule a demo and explore how ForensicFlow can support
+their operational and workflow management needs.
+</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<style>
+
+.faq-section{
+padding:100px 8%;
+background:linear-gradient(135deg,#1f4e79,#163a5f);
+font-family:'Segoe UI',sans-serif;
+}
+
+.faq-title{
+text-align:center;
+color:white;
+font-size:36px;
+margin-bottom:50px;
+}
+
+.faq-container{
+max-width:900px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+.faq-item{
+background:rgba(255,255,255,0.08);
+border-radius:12px;
+backdrop-filter:blur(6px);
+overflow:hidden;
+transition:0.3s;
+}
+
+.faq-item:hover{
+background:rgba(255,255,255,0.12);
+}
+
+.faq-question{
+width:100%;
+padding:18px 22px;
+border:none;
+background:transparent;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+}
+
+.faq-question span{
+font-size:22px;
+}
+
+.faq-answer{
+max-height:0;
+overflow:hidden;
+transition:max-height 0.35s ease;
+padding:0 22px;
+}
+
+.faq-answer p{
+color:#e3edf7;
+line-height:1.6;
+padding-bottom:18px;
+}
+
+@media(max-width:900px){
+
+.faq-section{
+padding:70px 6%;
+}
+
+.faq-title{
+font-size:26px;
+margin-bottom:35px;
+}
+
+/* CONTAINER */
+
+.faq-container{
+gap:12px;
+}
+
+/* ITEM */
+
+.faq-item{
+border-radius:10px;
+}
+
+/* QUESTION */
+
+.faq-question{
+padding:14px 16px;
+font-size:14px;
+}
+
+/* ICON */
+
+.faq-question span{
+font-size:20px;
+}
+
+/* ANSWER */
+
+.faq-answer{
+padding:0 16px;
+}
+
+.faq-answer p{
+font-size:13px;
+line-height:1.5;
+padding-bottom:14px;
+}
+
+}
+</style>
+
+
+<script>
+
+const faq=document.querySelectorAll(".faq-question");
+
+faq.forEach(q=>{
+
+q.addEventListener("click",()=>{
+
+const ans=q.nextElementSibling;
+
+if(ans.style.maxHeight){
+ans.style.maxHeight=null;
+q.querySelector("span").innerHTML="+";
+}else{
+
+document.querySelectorAll(".faq-answer").forEach(a=>{
+a.style.maxHeight=null;
+});
+
+document.querySelectorAll(".faq-question span").forEach(s=>{
+s.innerHTML="+";
+});
+
+ans.style.maxHeight=ans.scrollHeight+"px";
+q.querySelector("span").innerHTML="−";
+
+}
+
+});
+
+});
+
+</script>
+<section id="contact" class="contact-section">
+
+<div class="contact-container">
+
+<!-- LEFT TEXT -->
+
+<div class="contact-left">
+
+<h2>We are here to help!</h2>
+
+<p>
+Let us know how we can best serve you. Use the contact form to reach our
+team and explore how our platform can support your organisation's
+digital operations and workflow automation.
+</p>
+
+<p>
+Our mission is to provide reliable infrastructure, enterprise security
+and transparent digital processes that improve organisational efficiency.
+</p>
+
+</div>
+
+
+<!-- RIGHT FORM -->
+
+<div class="contact-right">
+
+<form id="contactForm">
+
+<input type="text" name="name" placeholder="Name" required>
+
+<input type="email" name="email" placeholder="Email" required>
+
+<input type="text" name="phone" placeholder="Phone number">
+
+<textarea name="message" placeholder="Comment" required></textarea>
+
+<button type="submit" id="submitBtn">Send Message</button>
+
+</form>
+
+<p id="status"></p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<style>
+
+.contact-section{
+padding:90px 8%;
+background:#f7f9fc;
+font-family:'Segoe UI',sans-serif;
+}
+
+.contact-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+/* LEFT */
+
+.contact-left h2{
+font-size:36px;
+color:#1f4e79;
+margin-bottom:20px;
+}
+
+.contact-left p{
+color:#555;
+line-height:1.7;
+margin-bottom:16px;
+}
+
+/* FORM */
+
+.contact-right form{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+input,textarea{
+padding:13px;
+border:none;
+border-bottom:2px solid #ddd;
+font-size:14px;
+background:transparent;
+}
+
+input:focus,
+textarea:focus{
+outline:none;
+border-bottom:2px solid #1f4e79;
+}
+
+textarea{
+height:120px;
+resize:none;
+}
+
+/* BUTTON */
+
+button{
+margin-top:10px;
+background:#1f4e79;
+color:white;
+border:none;
+padding:14px;
+border-radius:4px;
+cursor:pointer;
+font-weight:600;
+letter-spacing:1px;
+transition:0.3s;
+}
+
+button:hover{
+background:#163a5f;
+}
+
+#status{
+margin-top:12px;
+font-weight:600;
+}
+@media(max-width:900px){
+
+.contact-section{
+padding:70px 6%;
+}
+
+.contact-container{
+grid-template-columns:1fr;
+gap:35px;
+}
+
+/* LEFT TEXT */
+
+.contact-left{
+text-align:center;
+}
+
+.contact-left h2{
+font-size:26px;
+}
+
+.contact-left p{
+font-size:14px;
+line-height:1.6;
+}
+
+/* FORM */
+
+.contact-right form{
+gap:12px;
+}
+
+input,textarea{
+font-size:14px;
+padding:12px;
+}
+
+/* TEXTAREA */
+
+textarea{
+height:110px;
+}
+
+/* BUTTON */
+
+button{
+padding:12px;
+font-size:14px;
+}
+
+#status{
+font-size:14px;
+}
+
+}
+
+</style>
+
+
+<script>
+
+const form=document.getElementById("contactForm");
+const status=document.getElementById("status");
+const btn=document.getElementById("submitBtn");
+
+form.addEventListener("submit",async function(e){
+
+e.preventDefault();
+
+btn.innerHTML="Sending...";
+btn.disabled=true;
+
+const data=new FormData(form);
+
+fetch("https://formspree.io/f/mlgpddap",{
+method:"POST",
+body:data,
+headers:{'Accept':'application/json'}
+})
+
+.then(response=>{
+
+if(response.ok){
+
+status.innerHTML="✅ Message Sent Successfully!";
+form.reset();
+btn.innerHTML="Send Message";
+btn.disabled=false;
+
+}else{
+
+status.innerHTML="❌ Error Sending Message";
+btn.innerHTML="Send Message";
+btn.disabled=false;
+
+}
+
+})
+
+.catch(error=>{
+
+status.innerHTML="⚠️ Network Error";
+btn.innerHTML="Send Message";
+btn.disabled=false;
+
+});
+
+});
+
+</script>
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-left">
+<h3>ForensicFlow</h3>
+<p>Secure Digital Operations Platform</p>
+</div>
+
+<div class="footer-links">
+<a href="#home">Home</a>
+<a href="#p">Platform</a>
+<a href="#how">How It Works</a>
+<a href="#faq">faq</a>
+</div>
+
+<div class="footer-right">
+<p>© 2026 ForensicFlow</p>
+</div>
+
+</div>
+
+</footer>
+
+
+<style>
+
+.footer{
+background:#1f4e79;
+color:white;
+padding:18px 8%;
+font-family:'Segoe UI',sans-serif;
+}
+
+.footer-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.footer-left h3{
+margin:0;
+font-size:16px;
+}
+
+.footer-left p{
+font-size:12px;
+opacity:0.8;
+margin:2px 0 0;
+}
+
+.footer-links{
+display:flex;
+gap:20px;
+}
+
+.footer-links a{
+color:white;
+text-decoration:none;
+font-size:13px;
+opacity:0.9;
+transition:0.3s;
+}
+
+.footer-links a:hover{
+opacity:1;
+text-decoration:underline;
+}
+
+.footer-right{
+font-size:12px;
+opacity:0.8;
+}
+
+@media(max-width:900px){
+
+.footer{
+padding:20px 6%;
+}
+
+/* CONTAINER */
+
+.footer-container{
+flex-direction:column;
+text-align:center;
+gap:12px;
+}
+
+/* LEFT */
+
+.footer-left h3{
+font-size:15px;
+}
+
+.footer-left p{
+font-size:12px;
+}
+
+/* LINKS */
+
+.footer-links{
+flex-wrap:wrap;
+justify-content:center;
+gap:14px;
+}
+
+.footer-links a{
+font-size:13px;
+}
+
+/* RIGHT */
+
+.footer-right{
+font-size:12px;
+}
+
+}
+
+</style>
+</body>
+</html>
