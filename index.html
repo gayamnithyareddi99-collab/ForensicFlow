@@ -63,7 +63,15 @@ font-size:32px;
 
 </nav>
 
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<!-- 3 LINE MENU -->
+
+<div class="menu-toggle" onclick="toggleMenu()">
+
+<span></span>
+<span></span>
+<span></span>
+
+</div>
 
 </div>
 
@@ -83,7 +91,6 @@ font-size:32px;
 <a href="#contact">Contact</a>
 
 </div>
-
 
 
 <style>
@@ -135,16 +142,24 @@ transition:0.3s;
 color:#1f4e79;
 }
 
-/* MOBILE BUTTON */
+/* HAMBURGER ICON */
 
 .menu-toggle{
 display:none;
-font-size:24px;
+flex-direction:column;
 cursor:pointer;
-color:#1f4e79;
+gap:5px;
 }
 
-/* MOBILE MENU GRID */
+.menu-toggle span{
+width:24px;
+height:3px;
+background:#1f4e79;
+border-radius:2px;
+transition:0.3s;
+}
+
+/* MOBILE MENU */
 
 .mobile-menu{
 display:none;
@@ -172,7 +187,7 @@ color:#1f4e79;
 font-weight:600;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 
 @media(max-width:900px){
 
@@ -181,7 +196,7 @@ display:none;
 }
 
 .menu-toggle{
-display:block;
+display:flex;
 }
 
 }
@@ -347,29 +362,61 @@ color:#777;
 display:none;
 }
 
-/* MOBILE */
-
 @media(max-width:900px){
+
+.hero-section{
+padding:70px 6%;
+}
+
+/* GRID */
 
 .hero-container{
 grid-template-columns:1fr;
+gap:30px;
+text-align:center;
 }
 
+/* TITLE */
+
 .hero-left h1{
-font-size:36px;
+font-size:30px;
+line-height:1.3;
+}
+
+/* TEXT */
+
+.hero-left p{
+font-size:15px;
+margin-bottom:25px;
+}
+
+/* BUTTONS */
+
+.btn-primary,
+.btn-outline{
+display:inline-block;
+margin:6px;
+padding:10px 22px;
+font-size:14px;
+}
+
+/* IMAGE */
+
+.hero-right{
+display:none;
 }
 
 }
 
 </style>
 </section>
-<section class="about-section">
+<section id="about" class="about-section">
 
 <div class="about-container">
 
 <!-- LEFT SIDE -->
 
-<div id="about" class="about-left">
+<div class="about-left">
 
 <h2>About ForensicFlow</h2>
 
@@ -501,13 +548,65 @@ margin:25px 0;
 color:#555;
 font-size:14px;
 }
-
-/* MOBILE */
-
 @media(max-width:900px){
+
+.about-section{
+padding:80px 6%;
+}
+
+/* GRID */
 
 .about-container{
 grid-template-columns:1fr;
+gap:40px;
+}
+
+/* LEFT TEXT */
+
+.about-left{
+text-align:center;
+}
+
+.about-left h2{
+font-size:28px;
+}
+
+.about-intro{
+font-size:15px;
+}
+
+.about-left p{
+font-size:14px;
+line-height:1.6;
+}
+
+/* HIGHLIGHT */
+
+.about-highlight{
+font-size:14px;
+}
+
+/* FOUNDER CARD */
+
+.founder-card{
+padding:30px 25px;
+border-radius:14px;
+}
+
+.founder-card h3{
+font-size:20px;
+}
+
+.founder-card p{
+font-size:14px;
+}
+
+.founder-line{
+margin:18px auto;
+}
+
+.founder-note{
+font-size:13px;
 }
 
 }
@@ -797,13 +896,69 @@ transition:0.3s;
 background:#1f4e79;
 color:white;
 }
-
-/* MOBILE */
-
 @media(max-width:900px){
+
+.platform-section{
+padding:70px 6%;
+}
+
+.platform-title{
+font-size:28px;
+}
+
+.platform-subtitle{
+font-size:14px;
+margin-bottom:40px;
+}
+
+/* GRID */
 
 .platform-grid{
 grid-template-columns:1fr;
+gap:25px;
+}
+
+/* CARD */
+
+.platform-card{
+padding:25px 20px;
+}
+
+/* IMAGE BOX */
+
+.card-icon{
+width:100%;
+height:180px;
+border-radius:14px;
+}
+
+/* IMAGE */
+
+.card-icon img{
+width:100%;
+height:100%;
+object-fit:contain;
+}
+
+/* TEXT */
+
+.platform-card h4{
+font-size:18px;
+}
+
+.short-text{
+font-size:13px;
+}
+
+.more-text{
+font-size:13px;
+}
+
+/* BUTTON */
+
+.learn-btn{
+padding:8px 18px;
+font-size:13px;
 }
 
 }
@@ -970,17 +1125,61 @@ font-size:14px;
 color:#dfeaf5;
 line-height:1.6;
 }
-
-/* MOBILE */
-
 @media(max-width:900px){
+
+.process-section{
+padding:80px 6%;
+}
+
+.process-title{
+font-size:28px;
+margin-bottom:40px;
+}
+
+/* GRID */
 
 .process-container{
 grid-template-columns:1fr;
+gap:35px;
 }
+
+/* REMOVE LINE */
 
 .process-container::before{
 display:none;
+}
+
+/* STEP */
+
+.process-step{
+max-width:420px;
+margin:auto;
+}
+
+/* CIRCLE */
+
+.circle{
+width:65px;
+height:65px;
+margin-bottom:15px;
+}
+
+/* IMAGE */
+
+.circle img{
+max-width:120%;
+max-height:120%;
+}
+
+/* TEXT */
+
+.process-step h4{
+font-size:18px;
+}
+
+.process-step p{
+font-size:13px;
+line-height:1.5;
 }
 
 }
@@ -1205,17 +1404,63 @@ padding:6px 14px;
 font-size:12px;
 border-radius:20px;
 }
-
-/* MOBILE */
-
 @media(max-width:900px){
+
+.pricing-section{
+padding:70px 6%;
+}
+
+.pricing-title{
+font-size:28px;
+}
+
+.pricing-subtitle{
+font-size:14px;
+margin-bottom:40px;
+}
+
+/* GRID */
 
 .pricing-container{
 grid-template-columns:1fr;
+gap:25px;
 }
+
+/* CARD */
+
+.pricing-card{
+padding:30px 20px;
+}
+
+/* PRICE */
+
+.price{
+font-size:36px;
+}
+
+/* LIST */
+
+.pricing-card ul li{
+font-size:13px;
+}
+
+/* BUTTON */
+
+.btn{
+padding:10px 20px;
+font-size:14px;
+}
+
+/* POPULAR CARD */
 
 .popular{
 transform:none;
+}
+
+.badge{
+top:-10px;
+font-size:11px;
+padding:5px 12px;
 }
 
 }
@@ -1395,14 +1640,55 @@ line-height:1.6;
 padding-bottom:18px;
 }
 
-@media(max-width:768px){
+@media(max-width:900px){
+
+.faq-section{
+padding:70px 6%;
+}
 
 .faq-title{
-font-size:28px;
+font-size:26px;
+margin-bottom:35px;
+}
+
+/* CONTAINER */
+
+.faq-container{
+gap:12px;
+}
+
+/* ITEM */
+
+.faq-item{
+border-radius:10px;
+}
+
+/* QUESTION */
+
+.faq-question{
+padding:14px 16px;
+font-size:14px;
+}
+
+/* ICON */
+
+.faq-question span{
+font-size:20px;
+}
+
+/* ANSWER */
+
+.faq-answer{
+padding:0 16px;
+}
+
+.faq-answer p{
+font-size:13px;
+line-height:1.5;
+padding-bottom:14px;
 }
 
 }
-
 </style>
 
 
@@ -1571,14 +1857,58 @@ background:#163a5f;
 margin-top:12px;
 font-weight:600;
 }
-
-/* MOBILE */
-
 @media(max-width:900px){
+
+.contact-section{
+padding:70px 6%;
+}
 
 .contact-container{
 grid-template-columns:1fr;
-gap:40px;
+gap:35px;
+}
+
+/* LEFT TEXT */
+
+.contact-left{
+text-align:center;
+}
+
+.contact-left h2{
+font-size:26px;
+}
+
+.contact-left p{
+font-size:14px;
+line-height:1.6;
+}
+
+/* FORM */
+
+.contact-right form{
+gap:12px;
+}
+
+input,textarea{
+font-size:14px;
+padding:12px;
+}
+
+/* TEXTAREA */
+
+textarea{
+height:110px;
+}
+
+/* BUTTON */
+
+button{
+padding:12px;
+font-size:14px;
+}
+
+#status{
+font-size:14px;
 }
 
 }
@@ -1715,11 +2045,46 @@ font-size:12px;
 opacity:0.8;
 }
 
-@media(max-width:700px){
+@media(max-width:900px){
+
+.footer{
+padding:20px 6%;
+}
+
+/* CONTAINER */
 
 .footer-container{
 flex-direction:column;
 text-align:center;
+gap:12px;
+}
+
+/* LEFT */
+
+.footer-left h3{
+font-size:15px;
+}
+
+.footer-left p{
+font-size:12px;
+}
+
+/* LINKS */
+
+.footer-links{
+flex-wrap:wrap;
+justify-content:center;
+gap:14px;
+}
+
+.footer-links a{
+font-size:13px;
+}
+
+/* RIGHT */
+
+.footer-right{
+font-size:12px;
 }
 
 }
